@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV - Marcin Jarema - Data Engineer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary-color: #0f172a;
+            --accent-color: #2563eb;
+            --dark-text: #334155;
+            --light-text: #64748b;
+            --bg-color: #f8fafc;
+            --white: #ffffff;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; line-height: 1.6; color: var(--dark-text); background-color: var(--bg-color); padding: 2rem; }
+        .container { max-width: 900px; margin: 0 auto; background: var(--white); padding: 3rem; border-radius: 8px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); }
+        
+        /* HEADER - ZMODYFIKOWANY POD ZDJĘCIE */
+        header { 
+            border-bottom: 2px solid #e2e8f0; 
+            padding-bottom: 2rem; 
+            margin-bottom: 2rem; 
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        .header-content {
+            flex: 1;
+        }
+
+        /* STYL DLA ZDJĘCIA */
+        .header-photo {
+            flex-shrink: 0;
+            width: 220px;
+            height: 220px;
+            border-radius: 50%; /* Robi koło */
+            overflow: hidden;
+            border: 3px solid var(--accent-color);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .header-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Ważne: zdjęcie wypełni koło bez rozciągania */
+        }
+
+        h1 { font-size: 2.5rem; color: var(--primary-color); margin-bottom: 0.5rem; letter-spacing: -1px; line-height: 1.2; }
+        .job-title { font-size: 1.25rem; color: var(--accent-color); font-weight: 700; text-transform: uppercase; letter-spacing: 1px; }
+        .contact-info { margin-top: 1rem; display: flex; flex-wrap: wrap; gap: 1.5rem; font-size: 0.95rem; color: var(--light-text); }
+        .contact-info a { color: var(--light-text); text-decoration: none; display: flex; align-items: center; gap: 0.5rem; transition: color 0.3s; }
+        .contact-info a:hover { color: var(--accent-color); }
+
+        /* SECTIONS */
+        section { margin-bottom: 2.5rem; }
+        h2 { font-size: 1.4rem; border-left: 5px solid var(--accent-color); padding-left: 1rem; margin-bottom: 1.2rem; text-transform: uppercase; color: var(--primary-color); letter-spacing: 0.5px; }
+
+        /* PROJECT */
+        .project-card { background: #f1f5f9; padding: 1.5rem; border-radius: 6px; margin-bottom: 1rem; border: 1px solid #e2e8f0; }
+        .project-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem; }
+        .project-title { font-weight: 700; font-size: 1.15rem; color: var(--primary-color); }
+        .tech-stack { display: flex; gap: 0.5rem; margin-bottom: 1rem; flex-wrap: wrap; }
+        .tech-badge { background: var(--white); color: var(--accent-color); padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.75rem; font-weight: 700; border: 1px solid #cbd5e1; text-transform: uppercase; }
+
+        /* DIAGRAM PLACEHOLDER (OPCJONALNE) */
+        .architecture-diagram {
+            margin-top: 1rem;
+            padding: 1rem;
+            background: white;
+            border: 1px dashed #cbd5e1;
+            border-radius: 4px;
+            text-align: center;
+            font-size: 0.8rem;
+            color: #64748b;
+        }
+
+        /* EXPERIENCE & EDUCATION */
+        .entry { margin-bottom: 1.5rem; }
+        .entry-header { display: flex; justify-content: space-between; margin-bottom: 0.3rem; flex-wrap: wrap; }
+        .entry-title { font-weight: 700; font-size: 1.1rem; color: var(--dark-text); }
+        .entry-company { color: var(--accent-color); font-weight: 600; }
+        .entry-date { color: var(--light-text); font-size: 0.9rem; font-weight: 500; }
+        ul { list-style-position: inside; margin-left: 0.5rem; color: #475569; }
+        li { margin-bottom: 0.4rem; }
+
+        /* SKILLS GRID */
+        .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; }
+        .skill-category h3 { font-size: 1.0rem; margin-bottom: 0.8rem; color: var(--primary-color); border-bottom: 2px solid #e2e8f0; padding-bottom: 0.5rem; text-transform: uppercase; font-weight: 700; }
+
+        /* INTERESTS */
+        .interests { font-size: 0.9rem; color: #475569; margin-top: -1rem; }
+
+        /* FOOTER */
+        footer { margin-top: 3rem; border-top: 1px solid #e2e8f0; padding-top: 1rem; font-size: 0.7rem; color: #94a3b8; text-align: justify; line-height: 1.4; }
+
+        @media print {
+            body { background: white; padding: 0; }
+            .container { box-shadow: none; padding: 0; max-width: 100%; border: none; }
+            a { text-decoration: none; color: black; }
+            .tech-badge { border: 1px solid #000; color: black; }
+            h2 { border-left-color: #000; }
+            .header-photo { border: 1px solid #ccc; } /* Oszczędzanie tuszu */
+        }
+
+        /* Responsywność dla telefonów */
+        @media (max-width: 600px) {
+            header { flex-direction: column-reverse; text-align: center; }
+            .contact-info { justify-content: center; }
+            .header-photo { margin-bottom: 1rem; width: 120px; height: 120px; }
+            h2 { font-size: 1.2rem; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <div class="header-content">
+            <h1>Marcin Jarema</h1>
+            <div class="job-title">Junior Data Engineer | Data Analyst</div>
+            <div class="contact-info">
+                <a href="mailto:marcinjarema0802@gmail.com"><i class="fas fa-envelope"></i> marcinjarema0802@gmail.com</a>
+                <a href="tel:+48530106409"><i class="fas fa-phone"></i> 530 106 409</a>
+                <a href="#"><i class="fas fa-map-marker-alt"></i> Opole, Polska</a>
+                <a href="https://github.com/MarcinJarema" target="_blank"><i class="fab fa-github"></i> github.com/MarcinJarema</a>
+                <a href="#" target="_blank"><i class="fab fa-linkedin"></i> linkedin.com/in/marcin-jarema</a>
+            </div>
+        </div>
+        
+        <div class="header-photo">
+            <img src="./CV_profil.png" alt="Zdjęcie Profilowe">
+        </div>
+    </header>
+
+    <section>
+        <h2>Profil Zawodowy</h2>
+        <p>
+            Student inżynierskich studiów na kierunku "Analityka Danych w Biznesie" z silnym zapleczem technicznym (Mechatronika). 
+            Łączę umiejętności programistyczne (Python, Docker) z analityką biznesową (Power BI, SQL). 
+            Posiadam doświadczenie w pracy międzynarodowej (USA, Niemcy) oraz praktyczną wiedzę z zakresu budowania procesów ETL.
+            Szukam możliwości rozwoju w obszarze Inżynierii Danych.
+        </p>
+    </section>
+
+    <section>
+        <h2>Umiejętności Techniczne</h2>
+        <div class="skills-grid">
+            <div class="skill-category">
+                <h3>Data Analytics & BI</h3>
+                <ul>
+                    <li><strong>Power BI:</strong> Modelowanie danych, DAX, Wizualizacja</li>
+                    <li><strong>SQL (T-SQL):</strong> Złożone zapytania, procedury, optymalizacja</li>
+                    <li><strong>Excel:</strong> PowerQuery, Tabele przestawne</li>
+                    <li>Przygotowywanie i czyszczenie danych</li>
+                </ul>
+            </div>
+            <div class="skill-category">
+                <h3>Data Engineering & DevTools</h3>
+                <ul>
+                    <li><strong>Python:</strong> Pandas, Requests, BeautifulSoup</li>
+                    <li><strong>REST API:</strong> Integracja i pobieranie danych</li>
+                    <li><strong>Docker:</strong> Konteneryzacja, Docker Compose</li>
+                    <li><strong>Git & GitHub:</strong> Kontrola wersji</li>
+                </ul>
+            </div>
+            <div class="skill-category">
+                <h3>Języki i Kompetencje</h3>
+                <ul>
+                    <li><strong>Angielski: Poziom C1</strong> (Biegła komunikacja, praca w USA)</li>
+                    <li>Praca w zespołach międzynarodowych</li>
+                    <li>Analityczne rozwiązywanie problemów</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Realizowane Projekty</h2>
+        <div class="project-card">
+            <div class="project-header">
+                <div class="project-title">Opole Traffic ETL System</div>
+                <a href="https://github.com/MarcinJarema/Opole-Traffic-ETL" style="color:var(--accent-color); font-weight:600; text-decoration:none;"><i class="fab fa-github"></i> Zobacz Repozytorium</a>
+            </div>
+            <div class="tech-stack">
+                <span class="tech-badge">Python 3.10</span>
+                <span class="tech-badge">Docker</span>
+                <span class="tech-badge">SQLite</span>
+                <span class="tech-badge">TomTom API</span>
+                <span class="tech-badge">Pandas</span>
+            </div>
+            <ul>
+                <li>Zaprojektowanie procesu ETL integrującego dane o ruchu drogowym (<strong>TomTom API</strong>) z danymi pogodowymi.</li>
+                <li><strong>Infrastruktura:</strong> Pełna konteneryzacja (Docker Compose) z polityką <em>auto-restart</em> i trwałym wolumenem danych.</li>
+                <li><strong>Data Engineering:</strong> Transformacja surowych danych JSON, obliczanie wskaźnika natężenia ruchu (<strong>Jam Factor</strong>) i zapis do relacyjnej bazy SQL.</li>
+                <li><strong>Bezpieczeństwo:</strong> Izolacja konfiguracji i kluczy API przy użyciu zmiennych środowiskowych (.env).</li>
+            </ul>
+            
+            </div>
+    </section>
+
+    <section>
+        <h2>Doświadczenie Zawodowe</h2>
+        
+        <div class="entry">
+            <div class="entry-header">
+                <div>
+                    <div class="entry-title">Security Staff (Work & Travel)</div>
+                    <div class="entry-company">Greylock Camp, Massachusetts, USA</div>
+                </div>
+                <div class="entry-date">05.2025 – 08.2025</div>
+            </div>
+            <ul>
+                <li>Praca w anglojęzycznym środowisku międzynarodowym – codzienna biegła komunikacja i współpraca.</li>
+                <li>Odpowiedzialność za bezpieczeństwo obiektu oraz szybkie reagowanie na sytuacje awaryjne.</li>
+            </ul>
+        </div>
+
+        <div class="entry">
+            <div class="entry-header">
+                <div>
+                    <div class="entry-title">Ambasador Biura Karier</div>
+                    <div class="entry-company">Politechnika Opolska</div>
+                </div>
+                <div class="entry-date">10.2024 – Obecnie</div>
+            </div>
+            <ul>
+                <li>Promowanie inicjatyw rozwojowych, organizacja targów pracy i wydarzeń uczelnianych.</li>
+                <li>Aktywna współpraca z zespołem przy projektach marketingowych.</li>
+            </ul>
+        </div>
+
+        <div class="entry">
+            <div class="entry-header">
+                <div>
+                    <div class="entry-title">Operator Maszyn</div>
+                    <div class="entry-company">EHG Edelstahl, Niemcy</div>
+                </div>
+                <div class="entry-date">06.2023 – 08.2023</div>
+            </div>
+            <ul>
+                <li>Precyzyjna praca techniczna w oparciu o dokumentację oraz adaptacja do wysokich standardów jakościowych.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section>
+        <h2>Edukacja</h2>
+        <div class="entry">
+            <div class="entry-header">
+                <div class="entry-title">Politechnika Opolska</div>
+                <div class="entry-date">10.2024 – Obecnie</div>
+            </div>
+            <div>Kierunek: <strong>Analityka Danych w Biznesie</strong> (Studia Inżynierskie)</div>
+        </div>
+        <div class="entry">
+            <div class="entry-header">
+                <div class="entry-title">Zespół Szkół Ponadpodstawowych nr 1 w Praszce</div>
+                <div class="entry-date">2018 – 2022</div>
+            </div>
+            <div>Tytuł: <strong>Technik Mechatronik</strong> (Dyplom potwierdzający kwalifikacje zawodowe)</div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Zainteresowania</h2>
+        <p class="interests">
+            Nowe technologie i automatyzacja procesów, kinematografia, sport (pływanie - licencja ratownika).
+        </p>
+    </section>
+
+    <footer>
+        <p>Wyrażam zgodę na przetwarzanie moich danych osobowych dla potrzeb niezbędnych do realizacji procesu rekrutacji (zgodnie z ustawą z dnia 10 maja 2018 roku o ochronie danych osobowych (Dz. Ustaw z 2018, poz. 1000) oraz zgodnie z Rozporządzeniem Parlamentu Europejskiego i Rady (UE) 2016/679 z dnia 27 kwietnia 2016 r. w sprawie ochrony osób fizycznych w związku z przetwarzaniem danych osobowych i w sprawie swobodnego przepływu takich danych oraz uchylenia dyrektywy 95/46/WE (RODO)).</p>
+    </footer>
+</div>
+
+</body>
+</html>
