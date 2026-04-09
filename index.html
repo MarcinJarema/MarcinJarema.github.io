@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Marcin Jarema - Junior Data Engineer | Portfolio</title>
+    <title>Marcin Jarema - Junior Data Analyst | Portfolio CV</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 64 64%22><defs><linearGradient id=%22a%22 x1=%220%%22 y1=%220%%22 x2=%22100%%22 y2=%22100%%22><stop offset=%220%%22 stop-color=%22%230f172a%22/><stop offset=%22100%%22 stop-color=%22%232563eb%22/></linearGradient></defs><rect width=%2264%22 height=%2264%22 rx=%2216%22 fill=%22url(%23a)%22/><g transform=%22translate(32 35) scale(0.85) translate(-32 -32)%22><path d=%22M18 46a6 6 0 1 1 0-12 6 6 0 0 1 0 12zm14-14a6 6 0 1 1 0-12 6 6 0 0 1 0 12zm14-14a6 6 0 1 1 0-12 6 6 0 0 1 0 12z%22 fill=%22%23fff%22 opacity=%220.95%22/><path d=%22M22 36l10-10M36 22l10-10%22 stroke=%22%23fff%22 stroke-width=%224%22 stroke-linecap=%22round%22 opacity=%220.95%22/></g></svg>">
@@ -16,16 +16,33 @@
             --light-text: #64748b;
             --bg-color: #f8fafc;
             --white: #ffffff;
+            --border-color: #e2e8f0;
+            --card-bg: #f1f5f9;
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Inter', sans-serif; line-height: 1.6; color: var(--dark-text); background-color: var(--bg-color); padding: 2rem; }
-        .container { max-width: 900px; margin: 0 auto; background: var(--white); padding: 3rem; border-radius: 8px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); }
-        
-        header { 
-            border-bottom: 2px solid #e2e8f0; 
-            padding-bottom: 2rem; 
-            margin-bottom: 2rem; 
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--dark-text);
+            background-color: var(--bg-color);
+            padding: 2rem;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: var(--white);
+            padding: 3rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+
+        header {
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 2rem;
+            margin-bottom: 2rem;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -36,54 +53,224 @@
 
         .header-photo {
             flex-shrink: 0;
-            width: 200px;
-            height: 200px;
+            width: 190px;
+            height: 190px;
             border-radius: 50%;
             overflow: hidden;
             border: 3px solid var(--accent-color);
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         }
 
-        .header-photo img { width: 100%; height: 100%; object-fit: cover; }
-
-        h1 { font-size: 2.5rem; color: var(--primary-color); margin-bottom: 0.5rem; letter-spacing: -1px; line-height: 1.2; }
-        .job-title { font-size: 1.25rem; color: var(--accent-color); font-weight: 700; text-transform: uppercase; letter-spacing: 1px; }
-        .contact-info { margin-top: 1rem; display: flex; flex-wrap: wrap; gap: 1.5rem; font-size: 0.95rem; color: var(--light-text); }
-        .contact-info a { color: var(--light-text); text-decoration: none; display: flex; align-items: center; gap: 0.5rem; transition: color 0.3s; }
-        .contact-info a:hover { color: var(--accent-color); }
-
-        section { margin-bottom: 2.5rem; }
-        h2 { font-size: 1.4rem; border-left: 5px solid var(--accent-color); padding-left: 1rem; margin-bottom: 1.2rem; text-transform: uppercase; color: var(--primary-color); letter-spacing: 0.5px; }
-
-        .project-card { background: #f1f5f9; padding: 1.5rem; border-radius: 6px; margin-bottom: 1rem; border: 1px solid #e2e8f0; }
-        .project-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem; }
-        .project-title { font-weight: 700; font-size: 1.15rem; color: var(--primary-color); }
-        .tech-stack { display: flex; gap: 0.5rem; margin-bottom: 1rem; flex-wrap: wrap; }
-        .tech-badge { background: var(--white); color: var(--accent-color); padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.75rem; font-weight: 700; border: 1px solid #cbd5e1; text-transform: uppercase; }
-
-        .entry { margin-bottom: 1.5rem; }
-        .entry-header { display: flex; justify-content: space-between; margin-bottom: 0.3rem; flex-wrap: wrap; }
-        .entry-title { font-weight: 700; font-size: 1.1rem; color: var(--dark-text); }
-        .entry-company { color: var(--accent-color); font-weight: 600; }
-        .entry-date { color: var(--light-text); font-size: 0.9rem; font-weight: 500; }
-        ul { list-style-position: inside; margin-left: 0.5rem; color: #475569; }
-        li { margin-bottom: 0.4rem; }
-
-        .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; }
-        .skill-category h3 { font-size: 1.0rem; margin-bottom: 0.8rem; color: var(--primary-color); border-bottom: 2px solid #e2e8f0; padding-bottom: 0.5rem; text-transform: uppercase; font-weight: 700; }
-
-        footer { margin-top: 3rem; border-top: 1px solid #e2e8f0; padding-top: 1rem; font-size: 0.7rem; color: #94a3b8; text-align: justify; line-height: 1.4; }
-
-        @media print {
-            body { background: white; padding: 0; }
-            .container { box-shadow: none; padding: 0; max-width: 100%; border: none; }
-            .header-photo { border: 1px solid #ccc; width: 150px; height: 150px; }
+        .header-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
 
-        @media (max-width: 600px) {
-            header { flex-direction: column-reverse; text-align: center; }
-            .contact-info { justify-content: center; }
-            .header-photo { margin-bottom: 1rem; width: 120px; height: 120px; }
+        h1 {
+            font-size: 2.4rem;
+            color: var(--primary-color);
+            margin-bottom: 0.4rem;
+            letter-spacing: -1px;
+            line-height: 1.2;
+        }
+
+        .job-title {
+            font-size: 1.1rem;
+            color: var(--accent-color);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+        }
+
+        .contact-info {
+            margin-top: 1rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem 1.5rem;
+            font-size: 0.95rem;
+            color: var(--light-text);
+        }
+
+        .contact-info a,
+        .contact-info span {
+            color: var(--light-text);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .contact-info a:hover { color: var(--accent-color); }
+
+        section { margin-bottom: 2.4rem; }
+
+        h2 {
+            font-size: 1.35rem;
+            border-left: 5px solid var(--accent-color);
+            padding-left: 1rem;
+            margin-bottom: 1.1rem;
+            text-transform: uppercase;
+            color: var(--primary-color);
+            letter-spacing: 0.5px;
+        }
+
+        .profile-text {
+            color: #475569;
+            text-align: justify;
+        }
+
+        .project-card {
+            background: var(--card-bg);
+            padding: 1.5rem;
+            border-radius: 6px;
+            margin-bottom: 1rem;
+            border: 1px solid var(--border-color);
+        }
+
+        .project-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 0.5rem;
+            flex-wrap: wrap;
+        }
+
+        .project-title {
+            font-weight: 700;
+            font-size: 1.15rem;
+            color: var(--primary-color);
+        }
+
+        .project-link {
+            color: var(--accent-color);
+            font-weight: 600;
+            text-decoration: none;
+            white-space: nowrap;
+        }
+
+        .tech-stack {
+            display: flex;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .tech-badge {
+            background: var(--white);
+            color: var(--accent-color);
+            padding: 0.2rem 0.6rem;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            border: 1px solid #cbd5e1;
+            text-transform: uppercase;
+        }
+
+        .entry { margin-bottom: 1.5rem; }
+
+        .entry-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.3rem;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .entry-title {
+            font-weight: 700;
+            font-size: 1.05rem;
+            color: var(--dark-text);
+        }
+
+        .entry-company {
+            color: var(--accent-color);
+            font-weight: 600;
+        }
+
+        .entry-date {
+            color: var(--light-text);
+            font-size: 0.9rem;
+            font-weight: 500;
+            white-space: nowrap;
+        }
+
+        ul {
+            list-style-position: outside;
+            margin-left: 1.25rem;
+            color: #475569;
+        }
+
+        li { margin-bottom: 0.4rem; }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 1.8rem;
+        }
+
+        .skill-category h3 {
+            font-size: 1rem;
+            margin-bottom: 0.8rem;
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 0.5rem;
+            text-transform: uppercase;
+            font-weight: 700;
+        }
+
+        footer {
+            margin-top: 3rem;
+            border-top: 1px solid var(--border-color);
+            padding-top: 1rem;
+            font-size: 0.7rem;
+            color: #94a3b8;
+            text-align: justify;
+            line-height: 1.4;
+        }
+
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+
+            .container {
+                box-shadow: none;
+                padding: 0;
+                max-width: 100%;
+                border: none;
+            }
+
+            .header-photo {
+                border: 1px solid #ccc;
+                width: 150px;
+                height: 150px;
+            }
+        }
+
+        @media (max-width: 700px) {
+            header {
+                flex-direction: column-reverse;
+                text-align: center;
+            }
+
+            .contact-info {
+                justify-content: center;
+            }
+
+            .header-photo {
+                margin-bottom: 1rem;
+                width: 130px;
+                height: 130px;
+            }
+
+            .project-header,
+            .entry-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
         }
     </style>
 </head>
@@ -93,99 +280,133 @@
     <header>
         <div class="header-content">
             <h1>Marcin Jarema</h1>
-            <div class="job-title">Junior Data Engineer | Data Analyst</div>
+            <div class="job-title">Junior Data Analyst | Production Planning & Reporting | Power BI / SQL / Excel</div>
+
             <div class="contact-info">
                 <a href="mailto:marcinjarema0802@gmail.com"><i class="fas fa-envelope"></i> marcinjarema0802@gmail.com</a>
-                <a href="tel:+48530106409"><i class="fas fa-phone"></i> 530 106 409</a>
-                <a href="#"><i class="fas fa-map-marker-alt"></i> Opole, Polska</a>
-                <a href="https://github.com/MarcinJarema" target="_blank"><i class="fab fa-github"></i> github.com/MarcinJarema</a>
-                <a href="https://www.linkedin.com/in/marcin-jarema" target="_blank"><i class="fab fa-linkedin"></i> linkedin.com/in/marcin-jarema</a>
+                <a href="tel:+48530106409"><i class="fas fa-phone"></i> +48 530 106 409</a>
+                <span><i class="fas fa-map-marker-alt"></i> Opole, Polska</span>
+                <a href="https://github.com/MarcinJarema" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> github.com/MarcinJarema</a>
+                <a href="https://www.linkedin.com/in/marcin-jarema/" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i> linkedin.com/in/marcin-jarema</a>
             </div>
         </div>
-        
+
         <div class="header-photo">
             <img src="./img/CV_profil.png" alt="Marcin Jarema">
         </div>
     </header>
 
     <section>
-        <h2>Profil Zawodowy</h2>
-        <p>
-            Student inżynierskich studiów na kierunku "Analityka Danych w Biznesie" z silnym zapleczem technicznym (Mechatronika). 
-            Łączę umiejętności programistyczne (Python, Docker) z analityką biznesową (Power BI, SQL). 
-            Posiadam praktyczną wiedzę z zakresu budowania procesów ETL oraz doświadczenie w pracy międzynarodowej (USA, Niemcy).
-            <strong>Skupiam się na dostarczaniu rzetelnych danych i automatyzacji raportowania, co pozwala organizacjom podejmować trafne decyzje biznesowe w oparciu o fakty.</strong>
+        <h2>Profil zawodowy</h2>
+        <p class="profile-text">
+            Student Analityki Danych w Biznesie na Politechnice Opolskiej, rozwijający się w kierunku Data Analyst / Reporting Analyst.
+            Posiadam praktyczne doświadczenie w pracy z danymi, SQL, Excel, Power BI, Power Query oraz ETL.
+            Interesuję się analizą danych, reportingiem, wsparciem procesów biznesowych, planowaniem oraz przygotowaniem danych
+            do podejmowania decyzji operacyjnych. Dobrze odnajduję się w pracy wymagającej dokładności, porządkowania informacji,
+            analizy zależności i wspierania procesów planowania oraz zaopatrzenia.
         </p>
     </section>
 
     <section>
-        <h2>Umiejętności Techniczne</h2>
+        <h2>Umiejętności techniczne</h2>
         <div class="skills-grid">
             <div class="skill-category">
-                <h3>Data Analytics & BI</h3>
+                <h3>Data Analysis & Reporting</h3>
                 <ul>
-                    <li><strong>Power BI:</strong> Modelowanie danych, DAX, Wizualizacja</li>
-                    <li><strong>SQL:</strong> Złożone zapytania, optymalizacja, procedury</li>
-                    <li><strong>Microsoft Fabric:</strong> Podstawy analityki w chmurze</li>
-                    <li><strong>Excel:</strong> PowerQuery, Tabele przestawne, VBA</li>
+                    <li><strong>Power BI:</strong> dashboardy, KPI, wizualizacja, reporting</li>
+                    <li><strong>Excel:</strong> Power Query, tabele przestawne, analiza danych</li>
+                    <li><strong>SQL:</strong> zapytania, filtrowanie, przygotowanie danych</li>
+                    <li><strong>Data Analysis:</strong> analiza trendów, porządkowanie i interpretacja danych</li>
                 </ul>
             </div>
+
             <div class="skill-category">
-                <h3>Data Engineering & DevTools</h3>
+                <h3>Data Preparation & Tools</h3>
                 <ul>
-                    <li><strong>Python:</strong> Pandas, NumPy, Requests, Scrapy</li>
-                    <li><strong>ETL/ELT:</strong> Projektowanie rurociągów danych</li>
-                    <li><strong>Docker:</strong> Konteneryzacja, Docker Compose</li>
-                    <li><strong>AI Tools:</strong> Prompt Engineering w analizie danych</li>
+                    <li><strong>Python:</strong> Pandas, Requests, skrypty analityczne</li>
+                    <li><strong>ETL:</strong> data cleaning, data transformation, przygotowanie danych</li>
+                    <li><strong>Bazy danych:</strong> PostgreSQL, SQLite, modelowanie danych</li>
+                    <li><strong>Narzędzia:</strong> Git, Docker, REST API</li>
                 </ul>
             </div>
+
             <div class="skill-category">
-                <h3>Języki i Kompetencje</h3>
+                <h3>Process Support</h3>
                 <ul>
-                    <li><strong>Angielski: Poziom C1</strong> (Biegła komunikacja biznesowa)</li>
-                    <li><strong>Niemiecki: Poziom A2/B1</strong></li>
-                    <li>Analityczne rozwiązywanie problemów</li>
+                    <li><strong>Process support:</strong> analiza procesów, przepływ informacji, reporting operacyjny</li>
+                    <li><strong>Planning mindset:</strong> dokładność, praca na danych, wspieranie decyzji operacyjnych</li>
+                    <li><strong>Angielski:</strong> C1</li>
+                    <li><strong>Atuty:</strong> komunikacja, odpowiedzialność, analityczne podejście</li>
                 </ul>
             </div>
         </div>
     </section>
 
     <section>
-        <h2>Realizowane Projekty</h2>
+        <h2>Realizowane projekty</h2>
+
+        <div class="project-card">
+            <div class="project-header">
+                <div class="project-title">Bitcoin Halving Market Impact Analysis</div>
+                <a href="https://github.com/MarcinJarema" target="_blank" rel="noopener noreferrer" class="project-link">
+                    <i class="fab fa-github"></i> Zobacz GitHub
+                </a>
+            </div>
+            <div class="tech-stack">
+                <span class="tech-badge">Python</span>
+                <span class="tech-badge">Pandas</span>
+                <span class="tech-badge">yFinance</span>
+                <span class="tech-badge">Power Query</span>
+                <span class="tech-badge">Power BI</span>
+                <span class="tech-badge">Reporting</span>
+            </div>
+            <ul>
+                <li><strong>Zbudowałem</strong> projekt analityczny badający zachowanie BTC, ETH oraz wybranych spółek wokół halvingu Bitcoina, koncentrując się na analizie danych i porównaniu cykli rynkowych.</li>
+                <li><strong>Przygotowałem</strong> model danych w Power BI oparty na tabelach faktów i wymiarów, co uprościło filtrowanie cykli, analizę zakresów dni oraz reporting.</li>
+                <li><strong>Stworzyłem</strong> dashboard „BTC Halving Thesis” zawierający KPI, filtry, tabelę podsumowującą oraz wykresy ścieżek cenowych wspierające analizę zależności i prezentację danych.</li>
+                <li><strong>Wykorzystałem</strong> Python, Power Query i Power BI do pobrania danych, transformacji danych, przygotowania warstwy analitycznej oraz raportowania.</li>
+            </ul>
+        </div>
+
         <div class="project-card">
             <div class="project-header">
                 <div class="project-title">Opole Traffic ETL System</div>
-                <a href="https://github.com/MarcinJarema/Opole-Traffic-ETL" target="_blank" style="color:var(--accent-color); font-weight:600; text-decoration:none;"><i class="fab fa-github"></i> Zobacz Repozytorium</a>
+                <a href="https://github.com/MarcinJarema/Opole-Traffic-ETL" target="_blank" rel="noopener noreferrer" class="project-link">
+                    <i class="fab fa-github"></i> Zobacz repozytorium
+                </a>
             </div>
             <div class="tech-stack">
                 <span class="tech-badge">Python</span>
                 <span class="tech-badge">Docker</span>
                 <span class="tech-badge">PostgreSQL</span>
-                <span class="tech-badge">TomTom API</span>
+                <span class="tech-badge">REST API</span>
                 <span class="tech-badge">Power BI</span>
+                <span class="tech-badge">ETL</span>
             </div>
             <ul>
-                <li><strong>Zautomatyzowałem</strong> proces pozyskiwania danych o ruchu drogowym, przetwarzając średnio 15 000 rekordów dziennie bez ingerencji manualnej.</li>
-                <li><strong>Zaimplementowałem</strong> algorytm obliczający Jam Factor (0-10), umożliwiając identyfikację wąskich gardeł komunikacyjnych z dokładnością do 5 minut.</li>
-                <li><strong>Zoptymalizowałem</strong> strukturę bazy SQL poprzez indeksowanie, skracając czas generowania raportów ad-hoc o ok. 40%.</li>
-                <li><strong>Wizualizowałem</strong> korelacje pogoda-ruch w Power BI, tworząc interaktywne dashboardy wspierające wnioskowanie biznesowe.</li>
+                <li><strong>Zautomatyzowałem</strong> proces pozyskiwania i przetwarzania danych, obsługując około 15 000 rekordów dziennie i przygotowując dane do dalszej analizy oraz raportowania.</li>
+                <li><strong>Zintegrowałem</strong> dane z zewnętrznych źródeł z relacyjną bazą SQL, usprawniając przepływ informacji oraz przygotowanie danych do raportów operacyjnych.</li>
+                <li><strong>Przygotowałem</strong> dashboardy w Power BI wspierające reporting, analizę trendów i identyfikację wąskich gardeł w procesie.</li>
+                <li><strong>Zoptymalizowałem</strong> pracę na danych poprzez uporządkowanie struktury danych i wsparcie szybszego przygotowania analiz ad hoc.</li>
             </ul>
         </div>
     </section>
 
     <section>
-        <h2>Doświadczenie Zawodowe</h2>
-        
+        <h2>Doświadczenie zawodowe</h2>
+
         <div class="entry">
             <div class="entry-header">
                 <div>
                     <div class="entry-title">Ambasador Biura Karier</div>
                     <div class="entry-company">Politechnika Opolska</div>
                 </div>
-                <div class="entry-date">10.2024 – Obecnie</div>
+                <div class="entry-date">10.2024 – obecnie</div>
             </div>
             <ul>
-                <li>Współorganizuję Targi Pracy, agregując dane od partnerów biznesowych w celu budowania bazy kontaktów zawodowych uczelni.</li>
+                <li>Agreguję i porządkuję dane od partnerów biznesowych, wspierając reporting oraz organizację działań operacyjnych.</li>
+                <li>Wspieram komunikację i przepływ informacji między uczelnią, studentami i pracodawcami, dbając o terminowość i jakość danych.</li>
+                <li>Uczestniczę w organizacji wydarzeń i obsłudze procesów wymagających dokładności, koordynacji i sprawnego obiegu informacji.</li>
             </ul>
         </div>
 
@@ -198,7 +419,8 @@
                 <div class="entry-date">06.2025 – 09.2025</div>
             </div>
             <ul>
-                <li><strong>Koordynowałem logistykę i bezpieczeństwo</strong> w dynamicznym środowisku międzynarodowym, współpracując bezpośrednio z dyrekcją obiektu w języku angielskim (C1).</li>
+                <li>Koordynowałem komunikację w sytuacjach kryzysowych w języku angielskim, działając zgodnie z procedurami i pod presją czasu.</li>
+                <li>Współpracowałem w międzynarodowym zespole, dbając o bezpieczeństwo, organizację pracy i sprawny przepływ informacji.</li>
             </ul>
         </div>
 
@@ -206,37 +428,44 @@
             <div class="entry-header">
                 <div>
                     <div class="entry-title">Operator Maszyn</div>
-                    <div class="entry-company">EHG Edelstahl, Niemcy</div>
+                    <div class="entry-company">EHG Edelstahl, Niemcy/Polska</div>
                 </div>
-                <div class="entry-date">06.2023 – 08.2023</div>
+                <div class="entry-date">07.2022 – 06.2023</div>
             </div>
             <ul>
-                <li><strong>Analizowałem dokumentację techniczną</strong> i nadzorowałem ciągłość procesów produkcyjnych, dbając o 100% norm wydajnościowych.</li>
-                <li><strong>Raportowałem statusy produkcji</strong> i odchylenia jakościowe do kadry zarządzającej.</li>
+                <li>Monitorowałem ciągłość procesu produkcyjnego oraz analizowałem dokumentację techniczną, wspierając utrzymanie płynności operacyjnej.</li>
+                <li>Raportowałem status produkcji i odchylenia jakościowe, dostarczając dane wspierające bieżące decyzje operacyjne.</li>
+                <li>Pracowałem w środowisku wymagającym dokładności, dyscypliny procesowej i terminowej realizacji zadań.</li>
             </ul>
         </div>
     </section>
 
     <section>
         <h2>Edukacja</h2>
+
         <div class="entry">
             <div class="entry-header">
                 <div class="entry-title">Politechnika Opolska</div>
-                <div class="entry-date">10.2024 – Obecnie</div>
+                <div class="entry-date">10.2024 – obecnie</div>
             </div>
-            <div>Kierunek: <strong>Analityka Danych w Biznesie</strong> (Studia Inżynierskie)</div>
+            <div>Kierunek: <strong>Analityka Danych w Biznesie</strong> (studia inżynierskie)</div>
         </div>
+
         <div class="entry">
             <div class="entry-header">
                 <div class="entry-title">ZSP nr 1 w Praszce</div>
                 <div class="entry-date">2018 – 2022</div>
             </div>
-            <div>Tytuł: <strong>Technik Mechatronik</strong> (Dyplom potwierdzający kwalifikacje zawodowe)</div>
+            <div>Tytuł: <strong>Technik Mechatronik</strong></div>
         </div>
     </section>
 
     <footer>
-        <p>Wyrażam zgodę na przetwarzanie moich danych osobowych dla potrzeb niezbędnych do realizacji procesu rekrutacji (zgodnie z ustawą z dnia 10 maja 2018 roku o ochronie danych osobowych (Dz. Ustaw z 2018, poz. 1000) oraz zgodnie z Rozporządzeniem Parlamentu Europejskiego i Rady (UE) 2016/679 z dnia 27 kwietnia 2016 r. w sprawie ochrony osób fizycznych w związku z przetwarzaniem danych osobowych i w sprawie swobodnego przepływu takich danych oraz uchylenia dyrektywy 95/46/WE (RODO)).</p>
+        <p>
+            Wyrażam zgodę na przetwarzanie moich danych osobowych dla potrzeb niezbędnych do realizacji procesu rekrutacji
+            zgodnie z Rozporządzeniem Parlamentu Europejskiego i Rady (UE) 2016/679 z dnia 27 kwietnia 2016 r.
+            oraz ustawą z dnia 10 maja 2018 roku o ochronie danych osobowych.
+        </p>
     </footer>
 </div>
 
