@@ -299,11 +299,11 @@
     <section>
         <h2>Profil zawodowy</h2>
         <p class="profile-text">
-            Student Analityki Danych w Biznesie na Politechnice Opolskiej, rozwijający się w kierunku Data Analyst / Reporting Analyst.
-            Posiadam praktyczne doświadczenie w pracy z danymi, SQL, Excel, Power BI, Power Query oraz ETL.
-            Interesuję się analizą danych, reportingiem, wsparciem procesów biznesowych, planowaniem oraz przygotowaniem danych
-            do podejmowania decyzji operacyjnych. Dobrze odnajduję się w pracy wymagającej dokładności, porządkowania informacji,
-            analizy zależności i wspierania procesów planowania oraz zaopatrzenia.
+            Student Analityki Danych w Biznesie na Politechnice Opolskiej (studia niestacjonarne, ukończenie 02.2027).
+            Od 09.2026 pracuję jako Młodszy Specjalista ds. Planowania Produkcji w Aluprof S.A. Buduję raporty i dashboardy
+            w Power BI (model gwiazdy, DAX), pracuję w Excelu (w tym VBA), SQL i Pythonie, a w projektach własnych łączę
+            analitykę danych z systemami opartymi na AI (RAG, agenci LLM). Szukam roli analityka danych / BI lub raportowania,
+            w której dokładność, praca z danymi i dokumentacja przekładają się na decyzje biznesowe.
         </p>
     </section>
 
@@ -313,30 +313,30 @@
             <div class="skill-category">
                 <h3>Data Analysis & Reporting</h3>
                 <ul>
-                    <li><strong>Power BI:</strong> dashboardy, KPI, wizualizacja, reporting</li>
-                    <li><strong>Excel:</strong> Power Query, tabele przestawne, analiza danych</li>
-                    <li><strong>SQL:</strong> zapytania, filtrowanie, przygotowanie danych</li>
-                    <li><strong>Data Analysis:</strong> analiza trendów, porządkowanie i interpretacja danych</li>
+                    <li><strong>Power BI:</strong> model gwiazdy, miary DAX, KPI, tooltipy, nawigacja</li>
+                    <li><strong>Excel:</strong> zaawansowany (tabele przestawne, Power Query), VBA</li>
+                    <li><strong>SQL:</strong> zapytania, agregacje, optymalizacja (PostgreSQL)</li>
+                    <li><strong>Studia:</strong> statystyka, hurtownie danych, Business Intelligence</li>
                 </ul>
             </div>
 
             <div class="skill-category">
                 <h3>Data Preparation & Tools</h3>
                 <ul>
-                    <li><strong>Python:</strong> Pandas, Requests, skrypty analityczne</li>
-                    <li><strong>ETL:</strong> data cleaning, data transformation, przygotowanie danych</li>
-                    <li><strong>Bazy danych:</strong> PostgreSQL, SQLite, modelowanie danych</li>
-                    <li><strong>Narzędzia:</strong> Git, Docker, REST API</li>
+                    <li><strong>Python:</strong> Pandas, ETL, web scraping, yfinance</li>
+                    <li><strong>Bazy danych:</strong> PostgreSQL (pgvector), SQLite, Qdrant</li>
+                    <li><strong>Narzędzia:</strong> Git / GitHub, Docker, REST API (FastAPI)</li>
+                    <li><strong>Jakość:</strong> testy (pytest), lint (ruff), dokumentacja</li>
                 </ul>
             </div>
 
             <div class="skill-category">
-                <h3>Process Support</h3>
+                <h3>AI & Języki</h3>
                 <ul>
-                    <li><strong>Process support:</strong> analiza procesów, przepływ informacji, reporting operacyjny</li>
-                    <li><strong>Planning mindset:</strong> dokładność, praca na danych, wspieranie decyzji operacyjnych</li>
+                    <li><strong>LLM / RAG:</strong> LangChain, LangGraph, embeddingi, prompt engineering</li>
+                    <li><strong>AI w pracy:</strong> Claude Code, Gemini (programowanie wspomagane AI)</li>
                     <li><strong>Angielski:</strong> C1</li>
-                    <li><strong>Atuty:</strong> komunikacja, odpowiedzialność, analityczne podejście</li>
+                    <li><strong>Atuty:</strong> dokładność, analityczne podejście, szybka nauka</li>
                 </ul>
             </div>
         </div>
@@ -344,56 +344,120 @@
 
     <section>
         <h2>Realizowane projekty</h2>
-
         <div class="project-card">
             <div class="project-header">
-                <div class="project-title">Bitcoin Halving Market Impact Analysis</div>
+                <div class="project-title">Bitcoin Halving Market Impact</div>
                 <a href="https://github.com/MarcinJarema/bitcoin-halving-market-impact" target="_blank" rel="noopener noreferrer" class="project-link">
                     <i class="fab fa-github"></i> Repozytorium
                 </a>
             </div>
             <div class="tech-stack">
                 <span class="tech-badge">Python</span>
-                <span class="tech-badge">Pandas</span>
                 <span class="tech-badge">yFinance</span>
                 <span class="tech-badge">Power Query</span>
                 <span class="tech-badge">Power BI</span>
-                <span class="tech-badge">Reporting</span>
+                <span class="tech-badge">DAX</span>
             </div>
             <ul>
-                <li><strong>Zbudowałem</strong> projekt analityczny badający zachowanie BTC, ETH oraz wybranych spółek wokół halvingu Bitcoina, koncentrując się na analizie danych i porównaniu cykli rynkowych.</li>
-                <li><strong>Przygotowałem</strong> model danych w Power BI oparty na tabelach faktów i wymiarów, co uprościło filtrowanie cykli, analizę zakresów dni oraz reporting.</li>
-                <li><strong>Stworzyłem</strong> dashboard „BTC Halving Thesis” zawierający KPI, filtry, tabelę podsumowującą oraz wykresy ścieżek cenowych wspierające analizę zależności i prezentację danych.</li>
-                <li><strong>Wykorzystałem</strong> Python, Power Query i Power BI do pobrania danych, transformacji danych, przygotowania warstwy analitycznej oraz raportowania.</li>
+                <li><strong>Cel:</strong> opisać, jak zachowywały się BTC, ETH i wybrane spółki USA w oknach ±550 dni wokół halvingów 2016, 2020 i 2024.</li>
+                <li><strong>Zbudowałem</strong> model gwiazdy (tabele faktów i wymiarów) z miarami DAX oraz wielostronicowy raport Power BI z nawigacją, drill down i drill through, własnymi tooltipami i wizualizacjami niestandardowymi.</li>
+                <li><strong>Dodałem</strong> dokumentację i stronę pomocy w samym raporcie; dane pobrane w Pythonie (yfinance), przygotowane w Power Query. Projekt ma charakter opisowy, bez tez przyczynowych.</li>
             </ul>
         </div>
 
         <div class="project-card">
             <div class="project-header">
-                <div class="project-title">Opole Traffic ETL System</div>
+                <div class="project-title">Equity Research Agent</div>
+                <a href="https://github.com/MarcinJarema/equity-research-agent" target="_blank" rel="noopener noreferrer" class="project-link">
+                    <i class="fab fa-github"></i> Repozytorium
+                </a>
+            </div>
+            <div class="tech-stack">
+                <span class="tech-badge">Python</span>
+                <span class="tech-badge">LangGraph</span>
+                <span class="tech-badge">FastAPI</span>
+                <span class="tech-badge">pgvector</span>
+                <span class="tech-badge">Docker</span>
+            </div>
+            <ul>
+                <li><strong>Zbudowałem</strong> agenta analizy spółek giełdowych (graf router → narzędzia → synteza) z narzędziami do danych rynkowych, metryk i newsów oraz RAG na PostgreSQL z pgvector.</li>
+                <li><strong>Zadbałem o jakość:</strong> metryki liczone w kodzie, a nie przez LLM, ewaluacja LLM-as-judge, observability w LangSmith, testy pytest, lint ruff, całość w Docker Compose.</li>
+                <li>Projekt edukacyjny, nie porada inwestycyjna.</li>
+            </ul>
+        </div>
+
+        <div class="project-card">
+            <div class="project-header">
+                <div class="project-title">AI Assistant (RAG) dla ClickJobs.pl</div>
+                <a href="https://github.com/MarcinJarema/rag-job-assistant" target="_blank" rel="noopener noreferrer" class="project-link">
+                    <i class="fab fa-github"></i> Repozytorium
+                </a>
+            </div>
+            <div class="tech-stack">
+                <span class="tech-badge">Python</span>
+                <span class="tech-badge">FastAPI</span>
+                <span class="tech-badge">LangChain</span>
+                <span class="tech-badge">Qdrant</span>
+                <span class="tech-badge">TypeScript</span>
+            </div>
+            <ul>
+                <li><strong>Wdrożyłem</strong> backend asystenta AI (RAG) z bazą wektorową Qdrant, lokalnymi embeddingami i wymiennym dostawcą modelu językowego.</li>
+                <li><strong>Zabezpieczyłem</strong> rozwiązanie: filtr prompt-injection (PL + EN), rate limiting, kontrola kosztów, anonimizacja danych osobowych (RODO).</li>
+                <li><strong>Dostarczyłem</strong> osadzalny widget (TypeScript, Shadow DOM, white-label) i środowisko w Dockerze.</li>
+            </ul>
+        </div>
+
+        <div class="project-card">
+            <div class="project-header">
+                <div class="project-title">Opole Traffic ETL</div>
                 <a href="https://github.com/MarcinJarema/Opole-Traffic-ETL" target="_blank" rel="noopener noreferrer" class="project-link">
                     <i class="fab fa-github"></i> Repozytorium
                 </a>
             </div>
             <div class="tech-stack">
                 <span class="tech-badge">Python</span>
+                <span class="tech-badge">Flask</span>
+                <span class="tech-badge">SQLite</span>
                 <span class="tech-badge">Docker</span>
-                <span class="tech-badge">PostgreSQL</span>
-                <span class="tech-badge">REST API</span>
-                <span class="tech-badge">Power BI</span>
-                <span class="tech-badge">ETL</span>
+                <span class="tech-badge">pytest</span>
             </div>
             <ul>
-                <li><strong>Zautomatyzowałem</strong> proces pozyskiwania i przetwarzania danych, obsługując około 15 000 rekordów dziennie i przygotowując dane do dalszej analizy oraz raportowania.</li>
-                <li><strong>Zintegrowałem</strong> dane z zewnętrznych źródeł z relacyjną bazą SQL, usprawniając przepływ informacji oraz przygotowanie danych do raportów operacyjnych.</li>
-                <li><strong>Przygotowałem</strong> dashboardy w Power BI wspierające reporting, analizę trendów i identyfikację wąskich gardeł w procesie.</li>
-                <li><strong>Zoptymalizowałem</strong> pracę na danych poprzez uporządkowanie struktury danych i wsparcie szybszego przygotowania analiz ad hoc.</li>
+                <li><strong>Zautomatyzowałem</strong> pipeline ETL działający w czasie rzeczywistym: dane z 3 punktów w Opolu co 15 minut (TomTom API + scraping pogody), baza SQLite.</li>
+                <li><strong>Zaprojektowałem</strong> autorski wskaźnik jam_factor (0–10) i dashboard mapowy (Flask + Leaflet.js).</li>
+                <li><strong>Zadbałem o jakość:</strong> 22 testy automatyczne (pytest) i uruchamianie w Docker Compose.</li>
             </ul>
         </div>
     </section>
 
     <section>
         <h2>Doświadczenie zawodowe</h2>
+        <div class="entry">
+            <div class="entry-header">
+                <div>
+                    <div class="entry-title">Młodszy Specjalista ds. Planowania Produkcji</div>
+                    <div class="entry-company">Aluprof S.A., Opole</div>
+                </div>
+                <div class="entry-date">09.2026 – obecnie</div>
+            </div>
+            <ul>
+                <li>Przygotowuję instrukcje wykonywania procesów w systemie Tarkus.</li>
+                <li>Praca ze zleceniami produkcyjnymi i dokumentacją procesową w nowo tworzonym dziale planowania.</li>
+            </ul>
+        </div>
+
+        <div class="entry">
+            <div class="entry-header">
+                <div>
+                    <div class="entry-title">Praktykant — AI / Backend Developer</div>
+                    <div class="entry-company">ClickJobs.pl</div>
+                </div>
+                <div class="entry-date">22.06.2026 – 22.08.2026</div>
+            </div>
+            <ul>
+                <li>Wdrożenie systemu asystenta AI (RAG) od podstaw w ustrukturyzowanym środowisku firmowym, z bieżącą dokumentacją i komunikacją wyników do opiekuna.</li>
+                <li>Praktyki zakończone zaświadczeniem i referencją.</li>
+            </ul>
+        </div>
 
         <div class="entry">
             <div class="entry-header">
@@ -404,9 +468,8 @@
                 <div class="entry-date">10.2024 – obecnie</div>
             </div>
             <ul>
-                <li>Agreguję i porządkuję dane od partnerów biznesowych, wspierając reporting oraz organizację działań operacyjnych.</li>
-                <li>Wspieram komunikację i przepływ informacji między uczelnią, studentami i pracodawcami, dbając o terminowość i jakość danych.</li>
-                <li>Uczestniczę w organizacji wydarzeń i obsłudze procesów wymagających dokładności, koordynacji i sprawnego obiegu informacji.</li>
+                <li>Wspieranie organizacji Targów Pracy i stały kontakt z firmami (B2B).</li>
+                <li>Współpraca z wieloma osobami naraz oraz prezentowanie informacji różnym grupom odbiorców.</li>
             </ul>
         </div>
 
@@ -419,36 +482,35 @@
                 <div class="entry-date">06.2025 – 09.2025</div>
             </div>
             <ul>
-                <li>Koordynowałem komunikację w sytuacjach kryzysowych w języku angielskim, działając zgodnie z procedurami i pod presją czasu.</li>
-                <li>Współpracowałem w międzynarodowym zespole, dbając o bezpieczeństwo, organizację pracy i sprawny przepływ informacji.</li>
+                <li>Komunikacja w języku angielskim (C1) w międzynarodowym zespole.</li>
+                <li>Praca według procedur pod presją czasu.</li>
             </ul>
         </div>
 
         <div class="entry">
             <div class="entry-header">
                 <div>
-                    <div class="entry-title">Operator Maszyn</div>
-                    <div class="entry-company">EHG Edelstahl, Niemcy/Polska</div>
+                    <div class="entry-title">Operator Maszyn (praca sezonowa)</div>
+                    <div class="entry-company">EHG Edelstahl Rohrherstellung GmbH, Niemcy</div>
                 </div>
-                <div class="entry-date">07.2022 – 06.2023</div>
+                <div class="entry-date">06.2022 – 08.2022</div>
             </div>
             <ul>
-                <li>Monitorowałem ciągłość procesu produkcyjnego oraz analizowałem dokumentację techniczną, wspierając utrzymanie płynności operacyjnej.</li>
-                <li>Raportowałem status produkcji i odchylenia jakościowe, dostarczając dane wspierające bieżące decyzje operacyjne.</li>
-                <li>Pracowałem w środowisku wymagającym dokładności, dyscypliny procesowej i terminowej realizacji zadań.</li>
+                <li>Obsługa suwnicy i naprawa maszyn elektrycznych na linii produkcyjnej rur ze stali nierdzewnej.</li>
+                <li>Przegląd dokumentacji technicznej oraz raportowanie statusów produkcji i odchyleń jakościowych do kadry zarządzającej.</li>
             </ul>
         </div>
     </section>
 
     <section>
         <h2>Edukacja</h2>
-
         <div class="entry">
             <div class="entry-header">
                 <div class="entry-title">Politechnika Opolska</div>
-                <div class="entry-date">10.2024 – obecnie</div>
+                <div class="entry-date">10.2024 – obecnie (ukończenie 02.2027)</div>
             </div>
-            <div>Kierunek: <strong>Analityka Danych w Biznesie</strong> (studia inżynierskie)</div>
+            <div>Kierunek: <strong>Analityka Danych w Biznesie</strong> (studia inżynierskie I stopnia, niestacjonarne)</div>
+            <div>Python, SQL, statystyka, hurtownie danych, Business Intelligence, procesy biznesowe.</div>
         </div>
 
         <div class="entry">
