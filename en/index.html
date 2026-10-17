@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marcin Jarema - Junior Data Analyst | Portfolio CV (EN)</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 64 64%22><defs><linearGradient id=%22a%22 x1=%220%%22 y1=%220%%22 x2=%22100%%22 y2=%22100%%22><stop offset=%220%%22 stop-color=%22%230f172a%22/><stop offset=%22100%%22 stop-color=%22%232563eb%22/></linearGradient></defs><rect width=%2264%22 height=%2264%22 rx=%2216%22 fill=%22url(%23a)%22/><g transform=%22translate(32 35) scale(0.85) translate(-32 -32)%22><path d=%22M18 46a6 6 0 1 1 0-12 6 6 0 0 1 0 12zm14-14a6 6 0 1 1 0-12 6 6 0 0 1 0 12zm14-14a6 6 0 1 1 0-12 6 6 0 0 1 0 12z%22 fill=%22%23fff%22 opacity=%220.95%22/><path d=%22M22 36l10-10M36 22l10-10%22 stroke=%22%23fff%22 stroke-width=%224%22 stroke-linecap=%22round%22 opacity=%220.95%22/></g></svg>">
+
+    <style>
+        :root {
+            --primary-color: #0f172a;
+            --accent-color: #2563eb;
+            --dark-text: #334155;
+            --light-text: #64748b;
+            --bg-color: #f8fafc;
+            --white: #ffffff;
+            --border-color: #e2e8f0;
+            --card-bg: #f1f5f9;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--dark-text);
+            background-color: var(--bg-color);
+            padding: 2rem;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: var(--white);
+            padding: 3rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+
+        header {
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 2rem;
+            margin-bottom: 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        .header-content { flex: 1; }
+
+        .header-photo {
+            flex-shrink: 0;
+            width: 190px;
+            height: 190px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 3px solid var(--accent-color);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .header-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        h1 {
+            font-size: 2.4rem;
+            color: var(--primary-color);
+            margin-bottom: 0.4rem;
+            letter-spacing: -1px;
+            line-height: 1.2;
+        }
+
+        .job-title {
+            font-size: 1.1rem;
+            color: var(--accent-color);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+        }
+
+        .contact-info {
+            margin-top: 1rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem 1.5rem;
+            font-size: 0.95rem;
+            color: var(--light-text);
+        }
+
+        .contact-info a,
+        .contact-info span {
+            color: var(--light-text);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .contact-info a:hover { color: var(--accent-color); }
+
+        section { margin-bottom: 2.4rem; }
+
+        h2 {
+            font-size: 1.35rem;
+            border-left: 5px solid var(--accent-color);
+            padding-left: 1rem;
+            margin-bottom: 1.1rem;
+            text-transform: uppercase;
+            color: var(--primary-color);
+            letter-spacing: 0.5px;
+        }
+
+        .profile-text {
+            color: #475569;
+            text-align: justify;
+        }
+
+        .project-card {
+            background: var(--card-bg);
+            padding: 1.5rem;
+            border-radius: 6px;
+            margin-bottom: 1rem;
+            border: 1px solid var(--border-color);
+        }
+
+        .project-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 0.5rem;
+            flex-wrap: wrap;
+        }
+
+        .project-title {
+            font-weight: 700;
+            font-size: 1.15rem;
+            color: var(--primary-color);
+        }
+
+        .project-link {
+            color: var(--accent-color);
+            font-weight: 600;
+            text-decoration: none;
+            white-space: nowrap;
+        }
+
+        .tech-stack {
+            display: flex;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .tech-badge {
+            background: var(--white);
+            color: var(--accent-color);
+            padding: 0.2rem 0.6rem;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            border: 1px solid #cbd5e1;
+            text-transform: uppercase;
+        }
+
+        .entry { margin-bottom: 1.5rem; }
+
+        .entry-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.3rem;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .entry-title {
+            font-weight: 700;
+            font-size: 1.05rem;
+            color: var(--dark-text);
+        }
+
+        .entry-company {
+            color: var(--accent-color);
+            font-weight: 600;
+        }
+
+        .entry-date {
+            color: var(--light-text);
+            font-size: 0.9rem;
+            font-weight: 500;
+            white-space: nowrap;
+        }
+
+        ul {
+            list-style-position: outside;
+            margin-left: 1.25rem;
+            color: #475569;
+        }
+
+        li { margin-bottom: 0.4rem; }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 1.8rem;
+        }
+
+        .skill-category h3 {
+            font-size: 1rem;
+            margin-bottom: 0.8rem;
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 0.5rem;
+            text-transform: uppercase;
+            font-weight: 700;
+        }
+
+        footer {
+            margin-top: 3rem;
+            border-top: 1px solid var(--border-color);
+            padding-top: 1rem;
+            font-size: 0.7rem;
+            color: #94a3b8;
+            text-align: justify;
+            line-height: 1.4;
+        }
+
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+
+            .container {
+                box-shadow: none;
+                padding: 0;
+                max-width: 100%;
+                border: none;
+            }
+
+            .header-photo {
+                border: 1px solid #ccc;
+                width: 150px;
+                height: 150px;
+            }
+        }
+
+        @media (max-width: 700px) {
+            header {
+                flex-direction: column-reverse;
+                text-align: center;
+            }
+
+            .contact-info {
+                justify-content: center;
+            }
+
+            .header-photo {
+                margin-bottom: 1rem;
+                width: 130px;
+                height: 130px;
+            }
+
+            .project-header,
+            .entry-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+
+        .lang-switch { text-align: right; font-size: 0.85rem; margin-bottom: 0.5rem; }
+        .lang-switch a { color: var(--accent-color); font-weight: 700; text-decoration: none; }
+        .lang-switch a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="lang-switch"><a href="../">PL · Polska wersja</a></div>
+    <header>
+        <div class="header-content">
+            <h1>Marcin Jarema</h1>
+            <div class="job-title">Junior Data Analyst | Production Planning & Reporting | Power BI / SQL / Excel</div>
+
+            <div class="contact-info">
+                <a href="mailto:marcinjarema0802@gmail.com"><i class="fas fa-envelope"></i> marcinjarema0802@gmail.com</a>
+                <a href="tel:+48530106409"><i class="fas fa-phone"></i> +48 530 106 409</a>
+                <span><i class="fas fa-map-marker-alt"></i> Opole, Poland</span>
+                <a href="https://github.com/MarcinJarema" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> github.com/MarcinJarema</a>
+                <a href="https://www.linkedin.com/in/marcin-jarema/" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i> linkedin.com/in/marcin-jarema</a>
+            </div>
+        </div>
+
+        <div class="header-photo">
+            <img src="../img/CV_profil.png" alt="Marcin Jarema">
+        </div>
+    </header>
+
+    <section>
+        <h2>Professional Summary</h2>
+        <p class="profile-text">
+            Data Analytics in Business student at Opole University of Technology (part-time studies, graduating 02.2027).
+            Since 09.2026 I work as a Junior Production Planning Specialist at Aluprof S.A. I build reports and dashboards
+            in Power BI (star schema, DAX), work in Excel (including VBA), SQL and Python, and in personal projects I combine
+            data analytics with AI-based systems (RAG, LLM agents). I am looking for a data analyst / BI / reporting role where
+            accuracy, working with data and process documentation translate into business decisions.
+        </p>
+    </section>
+
+    <section>
+        <h2>Technical Skills</h2>
+        <div class="skills-grid">
+            <div class="skill-category">
+                <h3>Data Analysis & Reporting</h3>
+                <ul>
+                    <li><strong>Power BI:</strong> star schema, DAX measures, KPIs, tooltips, navigation</li>
+                    <li><strong>Excel:</strong> advanced (pivot tables, Power Query), VBA</li>
+                    <li><strong>SQL:</strong> queries, aggregations, optimisation (PostgreSQL)</li>
+                    <li><strong>Studies:</strong> statistics, data warehousing, Business Intelligence</li>
+                </ul>
+            </div>
+
+            <div class="skill-category">
+                <h3>Data Preparation & Tools</h3>
+                <ul>
+                    <li><strong>Python:</strong> Pandas, ETL, web scraping, yfinance</li>
+                    <li><strong>Databases:</strong> PostgreSQL (pgvector), SQLite, Qdrant</li>
+                    <li><strong>Tools:</strong> Git / GitHub, Docker, REST API (FastAPI)</li>
+                    <li><strong>Quality:</strong> testing (pytest), linting (ruff), documentation</li>
+                </ul>
+            </div>
+
+            <div class="skill-category">
+                <h3>AI & Languages</h3>
+                <ul>
+                    <li><strong>LLM / RAG:</strong> LangChain, LangGraph, embeddings, prompt engineering</li>
+                    <li><strong>AI in daily work:</strong> Claude Code, Gemini (AI-assisted development)</li>
+                    <li><strong>English:</strong> C1</li>
+                    <li><strong>Strengths:</strong> accuracy, analytical approach, fast learning</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Projects</h2>
+        <div class="project-card">
+            <div class="project-header">
+                <div class="project-title">Bitcoin Halving Market Impact</div>
+                <a href="https://github.com/MarcinJarema/bitcoin-halving-market-impact" target="_blank" rel="noopener noreferrer" class="project-link">
+                    <i class="fab fa-github"></i> Repository
+                </a>
+            </div>
+            <div class="tech-stack">
+                <span class="tech-badge">Python</span>
+                <span class="tech-badge">yFinance</span>
+                <span class="tech-badge">Power Query</span>
+                <span class="tech-badge">Power BI</span>
+                <span class="tech-badge">DAX</span>
+            </div>
+            <ul>
+                <li><strong>Goal:</strong> describe how BTC, ETH and selected US stocks behaved in ±550-day windows around the 2016, 2020 and 2024 halvings.</li>
+                <li><strong>Built</strong> a star-schema model (fact and dimension tables) with DAX measures and a multi-page Power BI report with navigation, drill down / drill through, custom tooltips and custom visuals.</li>
+                <li><strong>Added</strong> in-report documentation and a help page; data downloaded in Python (yfinance) and prepared in Power Query. The project is descriptive, with no causal claims.</li>
+            </ul>
+        </div>
+
+        <div class="project-card">
+            <div class="project-header">
+                <div class="project-title">Equity Research Agent</div>
+                <a href="https://github.com/MarcinJarema/equity-research-agent" target="_blank" rel="noopener noreferrer" class="project-link">
+                    <i class="fab fa-github"></i> Repository
+                </a>
+            </div>
+            <div class="tech-stack">
+                <span class="tech-badge">Python</span>
+                <span class="tech-badge">LangGraph</span>
+                <span class="tech-badge">FastAPI</span>
+                <span class="tech-badge">pgvector</span>
+                <span class="tech-badge">Docker</span>
+            </div>
+            <ul>
+                <li><strong>Built</strong> an equity analysis agent (router → tools → synthesis graph) with market data, metrics and news tools and RAG on PostgreSQL with pgvector.</li>
+                <li><strong>Quality focus:</strong> metrics calculated in code rather than by the LLM, LLM-as-judge evaluation, observability in LangSmith, pytest tests, ruff linting, everything in Docker Compose.</li>
+                <li>Educational project, not investment advice.</li>
+            </ul>
+        </div>
+
+        <div class="project-card">
+            <div class="project-header">
+                <div class="project-title">AI Assistant (RAG) for ClickJobs.pl</div>
+                <a href="https://github.com/MarcinJarema/rag-job-assistant" target="_blank" rel="noopener noreferrer" class="project-link">
+                    <i class="fab fa-github"></i> Repository
+                </a>
+            </div>
+            <div class="tech-stack">
+                <span class="tech-badge">Python</span>
+                <span class="tech-badge">FastAPI</span>
+                <span class="tech-badge">LangChain</span>
+                <span class="tech-badge">Qdrant</span>
+                <span class="tech-badge">TypeScript</span>
+            </div>
+            <ul>
+                <li><strong>Implemented</strong> the backend of an AI assistant (RAG) with a Qdrant vector database, local embeddings and a swappable LLM provider.</li>
+                <li><strong>Secured</strong> the solution: prompt-injection filter (PL + EN), rate limiting, cost control, anonymisation of personal data (GDPR).</li>
+                <li><strong>Delivered</strong> an embeddable widget (TypeScript, Shadow DOM, white-label) and a Docker environment.</li>
+            </ul>
+        </div>
+
+        <div class="project-card">
+            <div class="project-header">
+                <div class="project-title">Opole Traffic ETL</div>
+                <a href="https://github.com/MarcinJarema/Opole-Traffic-ETL" target="_blank" rel="noopener noreferrer" class="project-link">
+                    <i class="fab fa-github"></i> Repository
+                </a>
+            </div>
+            <div class="tech-stack">
+                <span class="tech-badge">Python</span>
+                <span class="tech-badge">Flask</span>
+                <span class="tech-badge">SQLite</span>
+                <span class="tech-badge">Docker</span>
+                <span class="tech-badge">pytest</span>
+            </div>
+            <ul>
+                <li><strong>Automated</strong> a real-time ETL pipeline: data from 3 locations in Opole every 15 minutes (TomTom API + weather scraping), SQLite database.</li>
+                <li><strong>Designed</strong> a custom jam_factor metric (0–10) and a map dashboard (Flask + Leaflet.js).</li>
+                <li><strong>Quality focus:</strong> 22 automated tests (pytest) and Docker Compose deployment.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section>
+        <h2>Professional Experience</h2>
+        <div class="entry">
+            <div class="entry-header">
+                <div>
+                    <div class="entry-title">Junior Production Planning Specialist</div>
+                    <div class="entry-company">Aluprof S.A., Opole</div>
+                </div>
+                <div class="entry-date">09.2026 – present</div>
+            </div>
+            <ul>
+                <li>I write step-by-step instructions (with screenshots) for processes in the Tarkus system, standardising ways of working in a newly created planning department.</li>
+                <li>I work with production order data and organise process documentation.</li>
+            </ul>
+        </div>
+
+        <div class="entry">
+            <div class="entry-header">
+                <div>
+                    <div class="entry-title">Intern — AI / Backend Developer</div>
+                    <div class="entry-company">ClickJobs.pl</div>
+                </div>
+                <div class="entry-date">22.06.2026 – 22.08.2026</div>
+            </div>
+            <ul>
+                <li>Implemented an AI assistant (RAG) from scratch in a structured company environment, with ongoing documentation and reporting of results to the supervisor.</li>
+                <li>Internship completed with a certificate and a reference.</li>
+            </ul>
+        </div>
+
+        <div class="entry">
+            <div class="entry-header">
+                <div>
+                    <div class="entry-title">Career Office Ambassador</div>
+                    <div class="entry-company">Opole University of Technology</div>
+                </div>
+                <div class="entry-date">10.2024 – present</div>
+            </div>
+            <ul>
+                <li>Supporting the organisation of Job Fairs and regular contact with companies (B2B).</li>
+                <li>Working with many people at once and presenting information to different audiences.</li>
+            </ul>
+        </div>
+
+        <div class="entry">
+            <div class="entry-header">
+                <div>
+                    <div class="entry-title">Security Staff (Work & Travel)</div>
+                    <div class="entry-company">Camp Greylock, Massachusetts, USA</div>
+                </div>
+                <div class="entry-date">06.2025 – 09.2025</div>
+            </div>
+            <ul>
+                <li>Day-to-day communication in English (C1) in an international team.</li>
+                <li>Working to procedures under time pressure.</li>
+            </ul>
+        </div>
+
+        <div class="entry">
+            <div class="entry-header">
+                <div>
+                    <div class="entry-title">Machine Operator (seasonal job)</div>
+                    <div class="entry-company">EHG Edelstahl Rohrherstellung GmbH, Germany</div>
+                </div>
+                <div class="entry-date">06.2022 – 08.2022</div>
+            </div>
+            <ul>
+                <li>Operating an overhead crane and repairing electrical machines on a stainless steel pipe production line.</li>
+                <li>Reviewing technical documentation and reporting production status and quality deviations to management.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section>
+        <h2>Education</h2>
+        <div class="entry">
+            <div class="entry-header">
+                <div class="entry-title">Opole University of Technology</div>
+                <div class="entry-date">10.2024 – present (graduating 02.2027)</div>
+            </div>
+            <div>Field of study: <strong>Data Analytics in Business</strong> (Bachelor of Engineering, part-time studies)</div>
+            <div>Python, SQL, statistics, data warehousing, Business Intelligence, business processes.</div>
+        </div>
+
+        <div class="entry">
+            <div class="entry-header">
+                <div class="entry-title">ZSP nr 1 in Praszka (secondary technical school)</div>
+                <div class="entry-date">2018 – 2022</div>
+            </div>
+            <div>Qualification: <strong>Mechatronics Technician</strong></div>
+        </div>
+    </section>
+
+    <footer>
+        <p>
+            I consent to the processing of my personal data for the purposes of the recruitment process in accordance with Regulation (EU) 2016/679 of the European Parliament and of the Council of 27 April 2016 (GDPR).
+        </p>
+    </footer>
+</div>
+
+</body>
+</html>
